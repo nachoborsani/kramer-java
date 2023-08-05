@@ -49,9 +49,9 @@ while(true && true){
 if(ValorFinal){
     alert("Refrescar la pagina en caso de querer hacer otra operacion");
 }else{
-    let valorProductoConRecargo = valorProducto*(1+recargo/100);
+    let valorProductoConRecargo = ((valorProducto*recargo)/100) + valorProducto;
     let valorDeCuota = valorProductoConRecargo/cuotas;
     
-    alert(`El valor total del producto financiado es de $${valorProductoConRecargo.toFixed(2)} a pagar en ${cuotas} cuotas de $${valorDeCuota.toFixed(2)}`);
-    alert("Refrescar la pagina en caso de querer hacer otra operacion");
+    alert(`Usted debe abonar ${cuotas} cuotas fijas de $${valorDeCuota.toFixed(2)} , valor total a pagar $${valorProductoConRecargo.toFixed(2)}`);
+    alert("Presione F5 para repetir operacion");
 }
